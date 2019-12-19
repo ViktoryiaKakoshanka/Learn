@@ -1,0 +1,78 @@
+createdAt: "2019-11-16T13:35:02.312Z"
+updatedAt: "2019-11-16T13:50:08.791Z"
+type: "MARKDOWN_NOTE"
+folder: "bd315eab0dfa8c7a5512"
+title: "XPath"
+tags: []
+content: '''
+  # XPath
+  
+  ## Поиск информации в XML файлах (XPath)
+  XPath ( англ. XML Path Language) — язык запросов к элементам XML-документа. XPath расширяет возможности работы с XML.
+  
+  Каждый элемент дерева находится на определенном уровне вложенности (далее — «уровень»). У элементов на одном уровне бывают предыдущие и следующие элементы.
+  
+  ![49187bf2.png](:storage\\71ca6c2a-0431-46d7-8130-7c32fdaaae85\\49187bf2.png)
+  
+  Это очень похоже на организацию каталогов в файловой системе, и строки XPath, фактически, — пути к «файлам» — элементам. Рассмотрим пример списка книг:
+  
+  ```xml
+  <?xml version="1.0" encoding="windows-1251"?>
+  <bookstore>
+     <book category="COOKING">
+       <title lang="it">Everyday Italian</title>
+       <author>Giada De Laurentiis</author>
+       <year>2005</year>
+       <price>30.00</price>
+     </book>
+     <book category="CHILDREN">
+       <title lang="en">Harry Potter</title>
+       <author>J K. Rowling</author>
+       <year>2005</year>
+       <price>29.99</price>
+     </book>
+     <book category="WEB">
+       <title lang="en">Learning XML</title>
+       <author>Erik T. Ray</author>
+       <year>2003</year>
+       <price>39.95</price>
+     </book>
+  </bookstore>
+  ```
+  
+  XPath запрос `/bookstore/book/price` вернет следующий результат:
+  ```xml
+  <price>30.00</price>
+  <price>29.99</price>
+  <price>39.95</price>
+  ```
+  Сокращенная форма этого запроса выглядит так: `//price`.
+  
+  С помощью XPath запросов можно искать информацию по атрибутам. 
+  Например, можно найти информацию о книге на итальянском языке: 
+  `//title[@lang="it"]` вернет `<title lang="it">Everyday Italian</title>`.
+  
+  Чтобы получить больше информации, необходимо модифицировать запрос `//book[title[@lang="it"]]` вернет:
+  ```xml
+  <book category="COOKING">
+       <title lang="it">Everyday Italian</title>
+       <author>Giada De Laurentiis</author>
+       <year>2005</year>
+       <price>30.00</price>
+     </book>
+  ```
+  В приведенной ниже таблице представлены некоторые выражения XPath и результат их работы:
+  
+  Таблица I.2 — Выражения XPath
+  |Выражение XPath	|Результат|
+  |---|---|
+  |`/bookstore/book[1]`|	Выбирает первый элемент book, который является потомком элемента bookstore|
+  |`/bookstore/book[position()<3]`|	Выбирает первые два элемента book, которые являются потомками элемента bookstore|
+  |`//title[@lang]`|	Выбирает все элементы title с атрибутом lang|
+  |`//title[@lang=’en’]`|	Выбирает все элементы title с атрибутом lang, который имеет значение en|
+  |`/bookstore/book[price>35.00]`|	Выбирает все элементы book, которые являются потомками элемента bookstore и которые содержать элемент price со значением больше 35.00|
+  |`/bookstore/book[price>35.00]/title`|	Выбирает все элементы title элементов book элементов bookstore, которые содержать элемент price со значением больше 35.00|
+'''
+linesHighlighted: []
+isStarred: false
+isTrashed: false

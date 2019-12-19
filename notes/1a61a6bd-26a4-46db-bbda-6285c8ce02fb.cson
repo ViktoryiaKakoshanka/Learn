@@ -1,0 +1,51 @@
+createdAt: "2019-12-11T15:24:59.305Z"
+updatedAt: "2019-12-11T16:47:52.667Z"
+type: "MARKDOWN_NOTE"
+folder: "129ef394d0726618bd70"
+title: "RUS 1. Содержание"
+tags: [
+  "Rus"
+]
+content: '''
+  ## RUS 1. Содержание
+  
+  1. Основное
+    Нормализация
+    Связи
+    Ограничения, ссылочная целостность
+  1. Объекты БД: таблицы, представления, триггеры ...
+  1. Запросы DML: SELECT, INSERT, UPDATE, DELETE
+  1. Запросы DDL: CREATE, ALTER, DROP
+  1. Dynamic SQL
+     Для чего dynamic SQL?
+     Пути запуска dynamic SQL: **EXEC**, **sp_executesql**
+     Dynamic SQL параметры
+  1. Хранимые процедуры и функции
+  2. [Транзакции](:note:138dad3a-4722-4d59-ab13-3a8e5a5c9910)
+    ACID
+    Уровни изоляции
+    Optimistic concurrency
+  2. Триггеры
+    Виды: DDL, DML, logon
+    INSTEAD OF
+    DML триггеры и транзакции
+  4. Индексы
+    Кластеризованные, некластеризованные
+    индексы с включением столбцов
+    Покрываемые индексы
+    Фильтрующие
+  6. Представления
+    Обновляемые
+    Индексированные
+  7. Backup и восстановление SQL Server, концепции безопасности
+  
+  
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/SfYaAQ9-RnE?list=PLrCZzMib1e9oOFQbuOgjKYbRUoA8zGKnj" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  
+  
+  
+  - [Kanban](:header:acid)
+'''
+linesHighlighted: []
+isStarred: false
+isTrashed: false

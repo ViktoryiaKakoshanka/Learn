@@ -1,0 +1,127 @@
+createdAt: "2019-12-16T15:04:26.905Z"
+updatedAt: "2019-12-18T14:53:18.548Z"
+type: "MARKDOWN_NOTE"
+folder: "129ef394d0726618bd70"
+title: "ENG 1.1 Normalization of Database"
+tags: []
+content: '''
+  ## ENG 1.1 Normalization of Database
+  
+  **Database Normalization** is a technique of organizing the data in the database.
+  **Normalization** is a systematic approach of decomposing tables to eliminate data redundancy(repetition) and undesirable characteristics like Insertion, Update and Deletion Anomalies. It is a multi-step process that puts data into tabular form, removing duplicated data from the relation tables.
+  
+  Normalization is used for mainly two purposes:
+  * Eliminating redundant(useless) data.
+  * Ensuring data dependencies make sense i.e data is logically stored.
+  
+  ### Problems Without Normalization
+  
+  If a table is not properly normalized and have data redundancy then it will not only **eat up extra memory space** but will also **make it difficult to handle and update the database**, without facing data loss. 
+  
+  Insertion, Updation and Deletion Anomalies are very frequent if database is not normalized.
+  
+  | nomber | name | branch | hod | office_tel |
+  |----|---|--|---|---|
+  |401 |Akon|	CSE| Mr. X | 53337|
+  |402 |Bkon|	CSE| Mr. X | 53337|
+  |403 |Ckon|	CSE| Mr. X | 53337|
+  |404 |Dkon|	CSE| Mr. X | 53337|
+  
+  We have data of students. As we can see, data for the fields branch, hod (Head of Department) and office_tel is repeated for the students who are in the same branch in the college, this is **Data Redundancy**.
+  
+  **Insertion Anomaly**
+  Suppose for a new admission, until and unless a student opts for a branch, data of the student cannot be inserted, or else we will have to set the branch information as NULL.
+  
+  Also, if we have to insert data of 100 students of same branch, then the branch information will be repeated for all those 100 students.
+  
+  **Updation Anomaly**
+  What if Mr. X leaves the college? or is no longer the HOD of computer science department? In that case all the student records will have to be updated, and if by mistake we miss any record, it will lead to data inconsistency.
+  
+  **Deletion Anomaly**
+  In our Student table, two different informations are kept together, Student information and Branch information. Hence, at the end of the academic year, if student records are deleted, we will also lose the branch information.
+  
+  ### Normalization Rule
+  Normalization rules are divided into the following normal forms:
+  * First Normal Form
+  * Second Normal Form
+  * Third Normal Form
+  * BCNF
+  * Fourth Normal Form
+  
+  #### First Normal Form (1NF)
+  |1. It should only have single (atomic) valued attributes/columns.| 3. Values stored in a column should be of the same domain|5. All the columns in a table should have unique names.|
+  |![a2847f25.png](:storage\\663c5778-dade-4549-8312-1ac9e598af3a\\a2847f25.png)| ![a31f81c9.png](:storage\\663c5778-dade-4549-8312-1ac9e598af3a\\a31f81c9.png)|  ![9216c0a5.png](:storage\\663c5778-dade-4549-8312-1ac9e598af3a\\9216c0a5.png)|
+  |-|-|-|
+  |7. And the order in which data is stored, does not matter.|
+  
+  #### Second Normal Form (2NF)
+  1. It should be in the First Normal form.
+  2. And, it should not have Partial Dependency.
+  
+  #### What is Dependency?
+  Let's take an example of a Student table with columns `student_id`, `name`, `reg_no`(registration number), `branch` and `address`(student's home address).
+  
+  In this table, student_id is the primary key and will be unique for every row, hence we can use student_id to fetch any row of data from this table.
+  
+  | student_id| name| reg_no| branch| address|
+  |-|-|-|-|-|
+  |10|Akon|07-WY|CSE|Kerala|
+  |11|Akon|08-WY|IT|Gujarat|
+  
+  So all I need is student_id and every other column **depends** on it, or can be fetched using it. This is **Dependency** and we also call it **Functional Dependency**.
+  
+  #### What is Partial Dependency?
+  
+  So now let's extend our example to see if more than 1 column together can act as a primary key.
+  
+  Let's create another table for **Subject**, which will have `subject_id` and `subject_name` fields and `subject_id` will be the primary key.
+  
+  |subject_id|subject_name|
+  |-|-|
+  |1|	Java|
+  |2|	C++|
+  |3|	Php|
+  
+  Now we have a **Student** table with student information and another table **Subject** for storing subject information.
+  
+  Let's create another table **Score**, to store the marks obtained by students in the respective subjects. We will also be saving name of the teacher who teaches that subject along with marks.
+  
+  |score_id|student_id|subject_id|marks|teacher|
+  |-|-|-|-|-|
+  |1|10|1|70|Java Teacher|
+  |2|10|2|75|C++ Teacher|
+  |3|11|1|80|Java Teacher|
+  
+  In the score table we are saving the student_id to know which student's marks are these and subject_id to know for which subject the marks are for.
+  
+  Together, `student_id + subject_id` forms a Candidate Key for this table, which can be the Primary key.
+  
+  Confused, How this combination can be a primary key?
+  
+  See, if I ask you to get me marks of student with student_id 10, can you get it from this table? No, because you don't know for which subject. And if I give you subject_id, you would not know for which student. Hence we need student_id + subject_id to uniquely identify any row.
+  
+  Now if you look at the **Score** table, we have a column names `teacher` which is only dependent on the subject, for Java it's Java Teacher and for C++ it's C++ Teacher & so on.
+  
+  Now as we just discussed that the primary key for this table is a composition of two columns which is `student_id & subject_id` but the teacher's name only depends on subject, hence the subject_id, and has nothing to do with student_id.
+  
+  📌 This is **Partial Dependency**, where an attribute in a table depends on only a part of the primary key and not on the whole key. 📌
+  
+  #### Third Normal Form (3NF)
+  A table is said to be in the Third Normal Form when,
+  
+  It is in the Second Normal form.
+  And, it doesn't have Transitive Dependency.
+  Here is the Third Normal Form tutorial. But we suggest you to first study about the second normal form and then head over to the third normal form.
+  
+  
+  Привет.
+  Есть предложение.
+  Как насчет устроить турнир по теннису по офису?
+  
+  
+  ### Links
+  [1NF, 2NF, 3NF and BCNF in Database Normalization \\| Studytonight](https://www.studytonight.com/dbms/database-normalization.php)
+'''
+linesHighlighted: []
+isStarred: true
+isTrashed: false

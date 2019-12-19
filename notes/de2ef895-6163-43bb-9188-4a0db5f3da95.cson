@@ -1,0 +1,48 @@
+createdAt: "2019-12-16T13:59:34.632Z"
+updatedAt: "2019-12-16T15:03:15.727Z"
+type: "MARKDOWN_NOTE"
+folder: "129ef394d0726618bd70"
+title: "ENG 1. Database architecture concepts"
+tags: []
+content: '''
+  ## ENG 1. Database architecture concepts
+  
+  ### What is a Database?
+  Database is an organized collection of data. Databases support storage and  manipulation of data. Databases make data management easy.
+  
+  ### What is a Database Management System (DBMS)?
+  **Database Management System (DBMS)** is a collection of programs which enables its users to access database, manipulate data, reporting / representation of  data .
+  
+  ### Types of DBMS
+  ![typesofdbms.png](https://www.guru99.com/images/typesofdbms.png)
+  
+  **Hierarchical** - this type of DBMS employs the "parent-child" relationship of storing data. This type of DBMS is rarely used nowadays. Its structure is like a tree with nodes representing records and branches representing fields. *The windows registry used in Windows XP is an example of a hierarchical database. Configuration settings are stored as tree structures with nodes.*
+  
+  **Network DBMS** - this type of DBMS supports many-to many relations. This usually results in complex database structures. ***RDM** Server is an example of a database management system that implements the network model.*
+  
+  **Relational DBMS** - this type of DBMS defines database relationships in form of tables, also known as relations. Unlike network DBMS, RDBMS does not support many to many relationships.Relational DBMS usually have pre-defined data types that they can support. *This is the most popular DBMS type in the market. Examples of relational database management systems include **MySQL, Oracle, and Microsoft SQL Server** database.*
+  
+  **Object Oriented Relation DBMS** - this type supports storage of new data types. The data to be stored is in form of objects. The objects to be stored in the database have attributes (i.e. gender, ager) and methods that define what to do with the data. ***PostgreSQL** is an example of an object oriented relational DBMS.*
+  
+  ### What is SQL?
+  **SQL** stands for **Structured Query language**. SQL is the standard language for dealing with Relational Databases. SQL can be used to *insert, search, update and delete database records*. SQL can do lots of other operations including *optimizing and maintenance of databases*. Relational databases like MySQL Database, Oracle, Ms SQL server, Sybase, etc uses SQL.
+  
+  ### What is NoSQL?
+  Its main characteristic is its non-adherence to Relational Database Concepts. **NOSQL** means **"Not only SQL"**. 
+  
+  They do not use SQL to query the data and do not follow strict schemas like relational models.With NoSQL, ACID (Atomicity, Consistency, Isolation, Durability) features are not guaranteed always.
+  
+  ### Database languages
+  Database languages are special-purpose languages, which allow one or more of the following tasks:
+  
+  **Data control language (DCL)** – controls access to data;
+  **Data definition language (DDL)** – defines data types such as **creat**ing, **alter**ing, or **drop**ping tables and the relationships among them;
+  **Data manipulation language (DML)** – performs tasks such as **insert**ing, **updat**ing, or **delet**ing data occurrences;
+  **Data query language (DQL)** – allows searching for information and computing derived information.
+  
+  ### Links
+  [What is Database? What is SQL?](https://www.guru99.com/introduction-to-database-sql.html)
+'''
+linesHighlighted: []
+isStarred: false
+isTrashed: false

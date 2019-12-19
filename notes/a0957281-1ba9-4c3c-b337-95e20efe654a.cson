@@ -1,0 +1,44 @@
+createdAt: "2019-12-11T13:55:38.710Z"
+updatedAt: "2019-12-18T08:41:56.070Z"
+type: "MARKDOWN_NOTE"
+folder: "129ef394d0726618bd70"
+title: "ENG 1 Index"
+tags: [
+  "Eng"
+]
+content: '''
+  ## ENG 1 Index
+  
+  1. [Database architecture concepts](:note:de2ef895-6163-43bb-9188-4a0db5f3da95)
+     [Normalization of Database](:note:663c5778-dade-4549-8312-1ac9e598af3a)
+    Relationships
+    Constraints, referential integrity
+    Database objects: tables, views, triggers ...
+  3. Query DML: SELECT, INSERT, UPDATE, DELETE
+  3. Query DDL: CREATE, ALTER, DROP
+  1. Dynamic SQL
+     What is dynamic SQL?
+     Ways to run dynamic SQL: EXEC, sp_executesql
+     Dynamic SQL query parameters
+  1. Stored procedures and functions
+  2. [Transactions](:note:138dad3a-4722-4d59-ab13-3a8e5a5c9910)
+    ACID
+    Transaction isolation levels
+    Optimistic concurrency
+  2. Triggers
+    Kinds of triggers: DDL, DML, logon
+    INSTEAD OF triggers
+    DML triggers and transactions
+  4. Indexes
+    Clustered, non-clustered indexes
+    Indexes with included columns
+    Indexes on computed columns
+    Filtered indexes
+  6. Views
+    Updatable views
+    Indexed views
+  7. Backup and restore SQL Server database, security concepts
+'''
+linesHighlighted: []
+isStarred: false
+isTrashed: false

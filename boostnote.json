@@ -1,0 +1,30 @@
+{
+  "folders": [
+    {
+      "key": "79ad1f6eac37f56d402c",
+      "color": "#1278BD",
+      "name": "Default"
+    },
+    {
+      "key": "f2bb564d8e8b712329fb",
+      "color": "#30D5C8",
+      "name": "Agile"
+    },
+    {
+      "key": "bd315eab0dfa8c7a5512",
+      "color": "#E10051",
+      "name": "XML"
+    },
+    {
+      "key": "129ef394d0726618bd70",
+      "color": "#FF8E00",
+      "name": "SQL"
+    },
+    {
+      "key": "3d08a4402a5a576654df",
+      "color": "#E8D252",
+      "name": "New Folder"
+    }
+  ],
+  "version": "1.0"
+}
